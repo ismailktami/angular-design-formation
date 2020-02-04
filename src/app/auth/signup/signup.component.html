@@ -1,0 +1,88 @@
+<section  >
+  <form fxLayout="column"
+        fxLayoutAlign="center center"
+        fxLayoutGap="10px"
+        style="height: 500px;"
+        #form="ngForm"
+        (ngSubmit)="signup(form)"
+  >
+
+    <div style="align-items: center" >
+          <h1 style="color:#3F51B5">Signup</h1>
+    </div>
+
+
+    <mat-form-field >
+      <input type="email"  matInput placeholder="Your email"
+             ngModel name="email"
+             required
+             minlength="4"
+             #emailIn="ngModel"
+
+
+      />
+      <!--<mat-hint  *ngIf="emailIn.value?.length<6" align="end"> {{emailIn.value?.length}}/6</mat-hint>-->
+      <mat-error *ngIf="emailIn.hasError('required')"> Email must be empty </mat-error>
+    </mat-form-field>
+
+    <mat-form-field >
+      <input type="password"  matInput placeholder="Your password"
+             ngModel name="password"
+             required
+             minlength="6"
+             #paswwordIn="ngModel"
+
+      />
+
+      <!--<mat-hint  *ngIf="paswwordIn.value?.length<6" align="end"> {{paswwordIn.value?.length}}/6</mat-hint>-->
+      <mat-error *ngIf="paswwordIn.hasError('required')"> Password must be empty </mat-error>
+
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput
+             [matDatepicker]="picker"
+             placeholder="Your BirthDate"
+             [max]="maxDate"
+             readonly
+             ngModel
+             name="birthDate"
+             #birthDateIn="ngModel"
+             required
+      >
+
+      <mat-error *ngIf="birthDateIn.hasError('required')">birthdate must not be empty</mat-error>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+
+
+    </mat-form-field>
+
+
+      <mat-checkbox   color="primary">Check your signup</mat-checkbox>
+
+
+
+
+    <button mat-raised-button color="primary"  [disabled]="!form.valid">
+      submit
+    </button>
+  </form>
+
+</section>
+
+
+
+
+
+
+
+<!--<section>-->
+
+  <!--<div id="container">-->
+    <!--<div id="child1" class="child"></div>-->
+    <!--<div id="child2" class="child" ></div>-->
+    <!--<div id="child3" class="child"></div>-->
+  <!--</div>-->
+
+<!--</section>-->

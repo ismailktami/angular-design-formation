@@ -1,0 +1,60 @@
+<section  >
+  <div style="height: 500px;"
+  fxLayoutAlign="center center"
+  >
+
+
+  <form fxLayout="column"
+        fxLayoutAlign="center center"
+        fxLayoutGap="10px"
+        style="height: 400px;"
+        #form="ngForm"
+        (ngSubmit)="login(form)"
+
+
+  >
+
+    <div style="align-items: center" >
+      <h2 style="color:#3F51B5">Login</h2>
+    </div>
+
+
+    <mat-form-field >
+      <input type="email"  matInput placeholder="Your email"
+             ngModel name="email"
+             required
+             minlength="4"
+             #emailIn="ngModel"
+
+
+      />
+      <mat-error *ngIf="emailIn.hasError('required')"> Email must be empty </mat-error>
+    </mat-form-field>
+
+    <mat-form-field >
+      <input type="password"  matInput placeholder="Your password"
+             ngModel name="password"
+             required
+             minlength="6"
+             #paswwordIn="ngModel"
+
+      />
+
+      <mat-error *ngIf="paswwordIn.hasError('required')"> Password must be empty </mat-error>
+
+    </mat-form-field>
+
+    <mat-checkbox   color="primary">Check your login</mat-checkbox>
+
+    <div fxLayout="row" fxLayoutGap="5px">
+      <button mat-raised-button color="primary"  [disabled]="!form.valid">
+        Login
+      </button>
+
+      <button mat-raised-button color="warn" (click)="form.reset()">
+        Reset
+      </button>
+    </div>
+  </form>
+  </div>
+</section>
