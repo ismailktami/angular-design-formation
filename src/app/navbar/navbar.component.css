@@ -33,3 +33,9 @@ mat-list-item:hover{
   padding-left: 6px;
 
 }
+mat-toolbar{
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  z-index: 10;
+}

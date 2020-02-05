@@ -43,12 +43,12 @@
           <li><a routerLink="/signup" *ngIf="!isAuth">Signup</a></li>
           <li><a routerLink="/login" *ngIf="!isAuth">Login</a></li>
           <li> <a routerLink="/training" *ngIf="isAuth">Training</a></li>
-          <li> <a  (click)="logout()" *ngIf="isAuth">Logout</a></li>
+          <li> <a  (click)="logout()" *ngIf="isAuth" style="cursor:pointer;">Logout</a></li>
         </ul>
 
       </div>
     </mat-toolbar>
-    <main>
+    <main style="margin-top: 65px;">
       <router-outlet></router-outlet>
 
     </main>

@@ -1,14 +1,19 @@
-<mat-tab-group>
-
-  <mat-tab label="Current Training" >
-    <app-new-training></app-new-training>
 
 
+<mat-tab-group [selectedIndex]="selected.value"
+               (selectedIndexChange)="selected.setValue($event)">
+  <mat-tab label="Exercices Cards" >
+<app-current-training>
+
+</app-current-training>
   </mat-tab>
-  <mat-tab label="New Training" >
-    <app-new-training></app-new-training>
-
+  <mat-tab label="New Exercice" >
+    <app-new-training   (exerciceAdded)="addTraining()"> </app-new-training>
   </mat-tab>
 
+
+  <mat-tab label="Exercices Table" >
+<app-training-table></app-training-table>
+  </mat-tab>
 
 </mat-tab-group>

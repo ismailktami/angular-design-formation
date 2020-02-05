@@ -1,0 +1,7 @@
+.bdelete {
+color: darkred;
+}
+
+.bedit:hover{
+  color: darkblue;
+}

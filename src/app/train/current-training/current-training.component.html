@@ -1,0 +1,36 @@
+<div  fxLayoutAlign="center center"
+      fxLayout.lt-md="row wrap"
+      fxLayout.md="row wrap"
+      fxLayout.xs="column"
+      fxLayout.gt-md="row wrap"
+      fxLayoutGap="10px"
+
+      style="margin-bottom: 20px;margin-top: 20px"
+
+>
+
+  <mat-card *ngFor="let exercice of exercices"  class="example-card"  fxLayout="column"
+            fxFlex.md="30"
+            fxFlex.xs="50"
+            fxFlex.lg="20"
+            fxFlex.sm="30"
+            fxFlex.gt-lg="20"
+  >
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{exercice.id}}</mat-card-title>
+      <mat-card-subtitle>{{exercice.name}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="../../../assets/images/logo.png" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        {{exercice.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions  fxLayoutAlign="center center">
+      <button mat-button class="bedit" color="primary" (click)="editExercice(exercice)">EDIT</button>
+      <button mat-button  class="bdelete" color="warn" (click)="deleteExercice(exercice)">DELETE</button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>

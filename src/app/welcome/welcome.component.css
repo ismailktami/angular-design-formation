@@ -1,3 +1,62 @@
 section h1{
   color: #3F51B5;
 }
+.welcomtittle{
+  text-decoration: underline;
+  text-shadow:1px 1px #3F51B5;
+  font-size: 30px;
+  color: #3F51B5;
+  cursor: pointer;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+
+
+.about .container{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.about{
+  background-image:url("../../assets/images/bg-masthead.jpg");
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  font-family: Merriweather,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+}
+.text-white-50 {
+  color: rgba(255,255,255,.5)!important;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.text-white .mb-4 {
+  margin-top: 50px;
+  margin-bottom: 100px;
+
+}
+p.mb-4 {
+  display: block;
+  text-align: center !important;
+
+}
+.buttonabout{
+  color: #212529;
+  background-color: #e2e6ea;
+  border-color: #dae0e5;
+  padding: 1.25rem 2.25rem;
+  font-size: .85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 10rem;
+  display: inline-block;
+
+}

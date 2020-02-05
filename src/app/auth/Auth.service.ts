@@ -35,7 +35,7 @@ export class AuthService {
     };
 
     this.authChange.next(true);
-    this.router.navigate(['training']);
+    this.router.navigate(['']);
   }
 
   logout() {
