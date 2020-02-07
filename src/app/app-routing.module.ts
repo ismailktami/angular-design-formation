@@ -6,7 +6,7 @@ import {LoginComponent} from './auth/login/login.component';
 import {AuthGardService} from './auth/auth-grad.service';
 import { TrainingPrimeNgComponent} from './primeng/training/training.component';
 import {TrainingMaterialComponent} from './train/training/training.component';
-import {TrainingAngComponent} from './antng/training/training.component';
+import {TestComponent} from './antng/test/test.component';
 
 
 const routes: Routes = [
@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: 'login' , component: LoginComponent},
   {path:'training/ngMaterial',component:TrainingMaterialComponent, canActivate: [AuthGardService]},
   {path: 'training/primeng' , component: TrainingPrimeNgComponent , canActivate: [AuthGardService]},
-  {path:'training/antng',component:TrainingAngComponent, canActivate: [AuthGardService]}
+  {path:'training/antng',component:TestComponent, canActivate: [AuthGardService]}
   ];
 
 @NgModule({

@@ -14,6 +14,10 @@ import {TrainingTableAngComponent} from './training-table/training-table.compone
 import {TrainingAngComponent} from './training/training.component';
 import { LoginAngComponent } from './login-ang/login-ang.component';
 import { SignupAngComponent } from './signup-ang/signup-ang.component';
+import {MaterialModule} from '../material.mdoule';
+import { NzTabsModule } from 'ng-zorro-antd/tabs';
+import { CommonModule } from '@angular/common';
+import {TestComponent} from './test/test.component';
 
 const antDesignIcons = AllIcons as {
   [key: string]: IconDefinition;
@@ -25,8 +29,8 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => {
 });
 
 @NgModule({
-  imports:[NzButtonModule,NgZorroAntdModule,NzInputModule,NzDatePickerModule ,NzCardModule,HttpClientModule,NzIconModule,NzTableModule],
-  exports:[NzButtonModule,NgZorroAntdModule,NzInputModule,NzDatePickerModule, NzCardModule,HttpClientModule,NzIconModule,NzTableModule]
+  imports:[NzButtonModule,NgZorroAntdModule,NzInputModule,NzDatePickerModule ,NzCardModule,HttpClientModule,NzIconModule,NzTableModule,CommonModule,NzTabsModule ,MaterialModule],
+  exports:[NzButtonModule,NgZorroAntdModule,NzInputModule,NzDatePickerModule, NzCardModule,HttpClientModule,NzIconModule,NzTableModule,NzTabsModule,CommonModule]
 ,  providers: [
     {
       provide: NZ_ICONS,

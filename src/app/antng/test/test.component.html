@@ -1,0 +1,164 @@
+<div fxLayout="column" fxLayoutAlign="center center" style="margin-top: 40px;margin-bottom: 40px;height: 100%" fxLayoutGap="20px;" fxLayout.gt-sm="column">
+
+  <div style="align-items: center;margin-top: 20px;margin-bottom: 25px;" >
+    <h2 style="color:#3F51B5">Login</h2>
+  </div>
+
+  <div style="margin-bottom: 20px;">
+    <input nz-input placeholder="Basic usage" style="width: 200px;"/>
+    <br />
+  </div>
+  <div style="margin-bottom: 20px;">
+    <input nz-input placeholder="Basic usage" style="width: 200px;" />
+  </div>
+  <div fxLayout.lt-sm="column" fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="5px">
+    <button nz-button nzType="primary" >Login</button>
+    <button nz-button nzType="danger">Reset</button>
+  </div>
+
+
+
+
+  <div style="align-items: center;margin-top: 20px;margin-bottom: 25px;" >
+    <h2 style="color:#3F51B5">Signup</h2>
+  </div>
+
+  <div style="margin-bottom: 20px;">
+    <input nz-input placeholder="Basic usage" style="width: 200px;"/>
+    <br />
+  </div>
+  <div style="margin-bottom: 20px;">
+    <input nz-input placeholder="Basic usage" style="width: 200px;" />
+  </div>
+
+  <div style="margin-bottom: 20px;">
+    <nz-date-picker fxFlex="100" [nzRenderExtraFooter]="plainFooter" nzShowTime></nz-date-picker>
+  </div>
+
+
+
+
+
+  <div fxLayout.lt-sm="column" fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="5px">
+    <button nz-button nzType="primary" >Login</button>
+    <button nz-button nzType="danger">Reset</button>
+  </div>
+
+
+
+
+
+</div>
+
+
+<div
+  fxLayoutAlign="center center"
+  fxLayout.lt-md="row wrap"
+  fxLayout.md="row wrap"
+  fxLayout.xs="column"
+  fxLayout.gt-md="row wrap"
+  fxLayoutGap="10px"
+
+  style="margin-bottom: 20px;margin-top: 20px"
+>
+
+    <nz-card
+
+      *ngFor="let exercice of exercices"
+      [nzActions]="[actionSetting, actionEdit, actionEllipsis]"
+      class="example-card"  fxLayout="column"
+      fxFlex.md="30"
+      fxFlex.xs="50"
+      fxFlex.lg="20"
+      fxFlex.sm="30"
+      fxFlex.gt-lg="20"
+      nzHoverable style="width:240px" [nzCover]="coverTemplate"
+      style="width:300px;" [nzCover]="coverTemplate" [nzActions]="[actionSetting, actionEdit, actionEllipsis]">
+      <nz-card-meta
+        [nzTitle]="exercice.name"
+        [nzDescription]="exercice.description"
+        [nzAvatar]="avatarTemplate"
+      ></nz-card-meta>
+    <ng-template #avatarTemplate>
+      <nz-avatar nzSrc="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar>
+    </ng-template>
+    <ng-template #coverTemplate>
+      <img alt="example" src="../../../assets/images/logo.png" />
+    </ng-template>
+    <ng-template #actionSetting>
+      <i nz-icon nzType="setting"></i>
+    </ng-template>
+    <ng-template #actionEdit>
+      <i nz-icon nzType="edit" (click)="editExercice(exercice)"></i>
+    </ng-template>
+    <ng-template #actionEllipsis>
+      <i nz-icon nzType="delete" (click)="deleteExercice(exercice)"></i>
+    </ng-template>
+    </nz-card>
+
+</div>
+
+
+
+
+
+<!--<div>Table</div>-->
+<div>
+  <nz-table #nzTable [nzData]="exercices"    nzPageSize="5"
+            nzShowSizeChanger
+  >
+    <thead>
+    <tr>
+      <th nzCustomFilter>
+        Name
+        <i
+          nz-th-extra
+          class="ant-table-filter-icon"
+          nz-icon
+          nz-dropdown
+          #dropdown="nzDropdown"
+          nzType="search"
+          [nzDropdownMenu]="menu"
+          [class.ant-table-filter-open]="dropdown.nzVisible"
+          nzTrigger="click"
+          nzPlacement="bottomRight"
+          [nzClickHide]="false"
+          nzTableFilter
+        ></i>
+      </th>
+
+      <th>Calories</th>
+      <th>Duration</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of nzTable.data">
+      <td>{{ data.id }}</td>
+
+      <td >
+      {{ data.name }}
+      </td>
+      <td>{{ data.calories }}</td>
+      <td>{{ data.duration}}</td>
+    </tr>
+    </tbody>
+  </nz-table>
+
+  <nz-dropdown-menu #menu="nzDropdownMenu">
+    <div class="search-box">
+      <input type="text" nz-input placeholder="Search name" [(ngModel)]="searchValue" />
+      <button nz-button nzSize="small" nzType="primary" (click)="search()" class="search-button">
+        Search
+      </button>
+      <button nz-button nzSize="small" (click)="reset()">Reset</button>
+    </div>
+  </nz-dropdown-menu>
+
+
+
+
+
+
+</div>

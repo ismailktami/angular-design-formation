@@ -17,7 +17,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { EditExerciceComponent } from './train/edit-exercice/edit-exercice.component';
 import {MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material';
 import { TrainingTableComponent } from './train/training-table/training-table.component';
-import { TestComponentComponent } from './primeng/test-component/test-component.component';
 import { TestComponent } from './antng/test/test.component';
 import {AntngModule} from './antng/antng.module';
 import {CurrentTrainingPrimeNgComponent} from './primeng/current-training/current-training.component';
@@ -44,12 +43,11 @@ import { SignupPrimengComponent } from './primeng/signup-primeng/signup-primeng.
     NavbarComponent,
     EditExerciceComponent,
     TrainingTableComponent,
-    TestComponentComponent,
-    TestComponent,
     TrainingMaterialComponent,
     TrainingTablePrimeNgComponent,
     LoginPrimengComponent,
-    SignupPrimengComponent
+    SignupPrimengComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
