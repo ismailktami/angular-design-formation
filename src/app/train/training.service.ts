@@ -11,7 +11,11 @@ export class TrainingService {
     {id: 'crunches1', name: 'Crunches1' , pathImage: 'https://material.angular.io/assets/img/examples/shiba2.jpg' , description : 'description1', duration: 30 , calories: 9 },
     {id: 'crunches2', name: 'Crunches2' , pathImage: 'https://material.angular.io/assets/img/examples/shiba2.jpg' , description : 'description1', duration: 30 , calories: 9 },
     {id: 'crunches3', name: 'Crunches3' , pathImage: 'https://material.angular.io/assets/img/examples/shiba2.jpg' , description : 'description1' , duration: 30 , calories: 9 },
-    {id: 'crunches4', name: 'Crunches4' , pathImage: 'https://material.angular.io/assets/img/examples/shiba2.jpg' , description : 'description1' , duration: 30 , calories: 9 }
+    {id: 'crunches4', name: 'Crunches4' , pathImage: 'https://material.angular.io/assets/img/examples/shiba2.jpg' , description : 'description1' , duration: 30 , calories: 9 },
+    {id: 'crunches5', name: 'Crunches5' , pathImage: 'https://material.angular.io/assets/img/examples/shiba2.jpg' , description : 'description1', duration: 30 , calories: 9 },
+    {id: 'crunches6', name: 'Crunches6' , pathImage: 'https://material.angular.io/assets/img/examples/shiba2.jpg' , description : 'description1', duration: 30 , calories: 9 },
+    {id: 'crunches7', name: 'Crunches7' , pathImage: 'https://material.angular.io/assets/img/examples/shiba2.jpg' , description : 'description1' , duration: 30 , calories: 9 },
+    {id: 'crunches8', name: 'Crunches8' , pathImage: 'https://material.angular.io/assets/img/examples/shiba2.jpg' , description : 'description1' , duration: 30 , calories: 9 }
     ];
 
   getExercices() {

@@ -1,0 +1,33 @@
+<div  fxLayoutAlign="center center"
+      fxLayout.lt-md="row wrap"
+      fxLayout.md="row wrap"
+      fxLayout.xs="column"
+      fxLayout.gt-md="row wrap"
+      fxLayoutGap="10px"
+
+      style="margin-bottom: 20px;margin-top: 20px"
+
+>
+
+  <p-card header="Advanced Card" subheader="Subheader"
+          *ngFor="let exercice of exercices"  class="example-card"  fxLayout="column"
+          fxFlex.md="30"
+          fxFlex.xs="50"
+          fxFlex.lg="20"
+          fxFlex.sm="30"
+          fxFlex.gt-lg="20"
+
+  >
+    <p-header>
+      {{exercice.id}} -- {{exercice.name}}
+      <img src="../../../assets/images/logo.png">
+    </p-header>
+    <div>{{exercice.description +'  '+exercice.duration+'  '+ exercice.calories}}</div>
+    <p-footer>
+      <button pButton type="button" label="Edit" icon="pi pi-check" class="ui-button-info" style="margin-right: .25em" (click)="editExercice(exercice)"></button>
+      <button pButton type="button" label="Delete" icon="pi pi-tra" class="ui-button-danger" (click)="deleteExercice(exercice)"></button>
+    </p-footer>
+  </p-card>
+
+
+</div>

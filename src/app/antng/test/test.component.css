@@ -1,0 +1,20 @@
+:host ::ng-deep .ant-calendar-picker{
+    width: 200px !important;
+}
+.search-box {
+  padding: 8px;
+}
+
+.search-box input {
+  width: 188px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.search-box button {
+  width: 90px;
+}
+
+.search-button {
+  margin-right: 8px;
+}

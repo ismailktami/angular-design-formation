@@ -1,0 +1,25 @@
+
+<div style="margin-top: 20px;margin-bottom: 20px">
+  <p-table [value]="exercices" [paginator]="true" [rows]="2">
+    <ng-template pTemplate="caption">
+      List of exercices
+    </ng-template>
+
+    <ng-template>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Calories</th>
+        <th>Duration</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-exercice>
+      <tr>
+        <td>{{exercice.id}}</td>
+        <td>{{exercice.name}}</td>
+        <td>{{exercice.calories}}</td>
+        <td>{{exercice.duration}}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
