@@ -3,7 +3,7 @@ import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 import {Exercice} from '../exerccice.model';
 
 @Component({
-  selector: 'app-edit-exercice',
+  selector: 'app-edit-exercice-material',
   templateUrl: './edit-exercice.component.html',
   styleUrls: ['./edit-exercice.component.css']
 })

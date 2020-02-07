@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, NgForm} from '@angular/forms';
+import {FormControl} from '@angular/forms';
 
 @Component({
-  selector: 'app-training-material',
+  selector: 'app-training-antng',
   templateUrl: './training.component.html',
   styleUrls: ['./training.component.css']
 })
-export class TrainingMaterialComponent implements OnInit {
+export class TrainingAngComponent implements OnInit {
+
   selected = new FormControl(0);
   constructor() { }
   ngOnInit() {
@@ -14,7 +15,7 @@ export class TrainingMaterialComponent implements OnInit {
   }
 
   addTraining() {
-        this.selected=new FormControl(0);
+    this.selected=new FormControl(0);
   }
 
 }

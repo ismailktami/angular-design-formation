@@ -4,9 +4,17 @@
   <mat-sidenav #sidenav role="navigation">
 
     <mat-nav-list>
-      <a mat-list-item  *ngIf="isAuth" routerLink="/training" (click)="sidenav.close() ">
+      <a mat-list-item  *ngIf="isAuth" routerLink="/training/primeng" (click)="sidenav.close() ">
+      <mat-icon>face</mat-icon>
+      <span class="nav-caption">PrimeNg</span>
+    </a>
+      <a mat-list-item  *ngIf="isAuth" routerLink="/training/ngMaterial" (click)="sidenav.close() ">
         <mat-icon>face</mat-icon>
-        <span class="nav-caption">Training</span>
+        <span class="nav-caption">Material</span>
+      </a>
+      <a mat-list-item  *ngIf="isAuth" routerLink="/training/antng" (click)="sidenav.close() ">
+        <mat-icon>face</mat-icon>
+        <span class="nav-caption">Zoro ng</span>
       </a>
       <a mat-list-item  *ngIf="!isAuth" routerLink="/signup" (click)="sidenav.close() ">
         <mat-icon>face</mat-icon>
@@ -42,7 +50,10 @@
         <ul  fxLayout fxLayoutGap="10px" fxHide.xs  class="navigation-items">
           <li><a routerLink="/signup" *ngIf="!isAuth">Signup</a></li>
           <li><a routerLink="/login" *ngIf="!isAuth">Login</a></li>
-          <li> <a routerLink="/training" *ngIf="isAuth">Training</a></li>
+          <li> <a routerLink="/training/primeng" *ngIf="isAuth">PerimeNg</a></li>
+          <li> <a routerLink="/training/ngMaterial" *ngIf="isAuth">Material</a></li>
+          <li> <a routerLink="/training/antng" *ngIf="isAuth">Zoro ng </a></li>
+
           <li> <a  (click)="logout()" *ngIf="isAuth" style="cursor:pointer;">Logout</a></li>
         </ul>
 

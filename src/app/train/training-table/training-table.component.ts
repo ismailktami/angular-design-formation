@@ -4,7 +4,7 @@ import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 import {TrainingService} from '../training.service';
 
 @Component({
-  selector: 'app-training-table',
+  selector: 'app-training-table-material',
   templateUrl: './training-table.component.html',
   styleUrls: ['./training-table.component.css']
 })

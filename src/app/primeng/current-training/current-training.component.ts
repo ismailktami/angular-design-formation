@@ -5,11 +5,11 @@ import {EditExerciceComponent} from '../../train/edit-exercice/edit-exercice.com
 import {TrainingService} from '../../train/training.service';
 
 @Component({
-  selector: 'app-current-training',
+  selector: 'app-current-training-primeng',
   templateUrl: './current-training.component.html',
   styleUrls: ['./current-training.component.css']
 })
-export class CurrentTrainingComponent implements OnInit {
+export class CurrentTrainingPrimeNgComponent implements OnInit {
 
   exercices: Exercice[] = [];
   exerciceEdit: Exercice = null;

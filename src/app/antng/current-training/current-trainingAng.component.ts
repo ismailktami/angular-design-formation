@@ -1,16 +1,16 @@
-
 import { Component, OnInit } from '@angular/core';
-import {TrainingService} from '../training.service';
-import {Exercice} from '../exerccice.model';
+import {Exercice} from '../../train/exerccice.model';
 import {MatDialog, MatDialogRef} from '@angular/material';
-import {EditExerciceComponent} from '../edit-exercice/edit-exercice.component';
+import {EditExerciceComponent} from '../../train/edit-exercice/edit-exercice.component';
+import {TrainingService} from '../../train/training.service';
 
 @Component({
-  selector: 'app-current-training-material',
+  selector: 'app-current-training-antng',
   templateUrl: './current-training.component.html',
   styleUrls: ['./current-training.component.css']
 })
-export class CurrentTrainingComponent implements OnInit {
+export class CurrentTrainingAngComponent implements OnInit {
+
   exercices: Exercice[] = [];
   exerciceEdit: Exercice = null;
   mode : boolean;
@@ -43,4 +43,5 @@ export class CurrentTrainingComponent implements OnInit {
       }
     );
   }
+
 }

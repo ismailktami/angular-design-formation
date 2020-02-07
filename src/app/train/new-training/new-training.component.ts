@@ -6,7 +6,7 @@ import {Router} from '@angular/router';
 import {Output, EventEmitter} from '@angular/core';
 
 @Component({
-  selector: 'app-new-training',
+  selector: 'app-new-training-material',
   templateUrl: './new-training.component.html',
   styleUrls: ['./new-training.component.css']
 })
